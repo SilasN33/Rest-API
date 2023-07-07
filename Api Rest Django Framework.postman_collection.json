@@ -1,0 +1,299 @@
+{
+	"info": {
+		"_postman_id": "3ff11ed1-1631-4078-bbf3-72dcf9f264e2",
+		"name": "Api Rest Django Framework",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24996011"
+	},
+	"item": [
+		{
+			"name": "Movie",
+			"item": [
+				{
+					"name": "list_all_movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/core/list-movies/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"core",
+								"list-movies",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List_movies_by_genre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/core/movies/genre/teste5/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"core",
+								"movies",
+								"genre",
+								"teste5",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add_new_movie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\n    \"title\": \"movie_test\",\n    \"plot\": \"test\",\n    \"year\": \"12/02/2022\",\n    \"runtime\": \"100\",\n    \"genre\": \"Action\",\n    \"director\": \"director_test\",\n    \"rating\": 5,\n    \"poster\": \"poster_test\"\n\n"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/core/add-movies/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"core",
+								"add-movies",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_movie_by_id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Jumanji update\",\n    \"plot\": \"2\",\n    \"year\": \"2222-02-11\",\n    \"runtime\": \"300\",\n    \"genre\": \"Action\",\n    \"director\": \"director_test\",\n    \"rating\": 200.0,\n    \"poster\": \"teste5\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/core/update-movies/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"core",
+								"update-movies",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_movie_by_id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/core/delete-movies/3/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"core",
+								"delete-movies",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Series",
+			"item": [
+				{
+					"name": "list_serie_by_rating",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/core/serie/rating/4/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"core",
+								"serie",
+								"rating",
+								"4",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list_all_series",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/core/list-series/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"core",
+								"list-series",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_new_series",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 3,\n    \"title\": \"teste5\",\n    \"plot\": \"2\",\n    \"year\": \"1111-11-11\",\n    \"seasons\": \"3\",\n    \"genre\": \"action\",\n    \"writer\": \"teste\",\n    \"rating\": 4.0,\n    \"poster\": \"teste5\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/core/add-series/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"core",
+								"add-series",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_series_by_id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"title\": \"Fast and Furious update\",\n    \"plot\": \"2\",\n    \"year\": \"1111-11-11\",\n    \"seasons\": \"5\",\n    \"genre\": \"Adventure\",\n    \"writer\": \"writer test\",\n    \"rating\": 5.0,\n    \"poster\": \"2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/core/update-serie/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"core",
+								"update-serie",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_series_by_id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/core/delete-serie/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"core",
+								"delete-serie",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
